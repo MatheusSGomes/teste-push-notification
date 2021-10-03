@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste Desktop Notifications</title>
+</head>
+
+<body>
+
+  Teste Desktop Notifications API
+  <button onclick="buttonNotification()">Notificação</button>
+
+  <script>
+    // default; granted; denied
+    // console.log(Notification.permission)
+
+    
+
+    function showNotification() {
+      const notification = new Notification('Título: Nova mensagem!', {
+        body: 'Oi! Sua caixa chegou!\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non condimentum ante. Cras egestas vive...',
+        icon: './logo.png',
+        image: './caixa.png',
+      })
+
+      notification.onclick = (e) => {
+        // window.location.href = 'https://ameicha.com/';
+
+        // const a = document.createElement('a');
+        // a.target = '_blank';
+        // a.href = 'https://ameicha.com/';
+        // a.click()
+
+        window.open('https://ameicha.com/', '_blank')
+      }
+    }
+
+    if (Notification.permission === 'granted') {
+      // console.log('we have permission');
+      showNotification();
+
+    } else if (Notification.permission !== 'denied') {
+      Notification.requestPermission()
+        .then(permission => {
+          if (permission === 'granted') {
+            showNotification();
+          }
+          // console.log(permission)
+
+        })
+        .catch((reason) => console.log(reason))
+    }
+
+
+  </script>
+</body>
+
+</html>
