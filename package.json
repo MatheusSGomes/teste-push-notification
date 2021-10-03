@@ -1,0 +1,21 @@
+{
+  "name": "desktop-notifications",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatheusSGomes/teste-push-notification.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatheusSGomes/teste-push-notification/issues"
+  },
+  "homepage": "https://github.com/MatheusSGomes/teste-push-notification#readme",
+  "dependencies": {}
+}
