@@ -1,8 +1,9 @@
 {
   "name": "desktop-notifications",
+  "author": "Matheus Gomes",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Exercicio para uso da API de push notification",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
